@@ -9,8 +9,6 @@ class ItemViewSet(viewsets.ModelViewSet):
     queryset = PerfumeDetails.objects.all()
     serializer_class = PerfumeDetailSerializer
     
-
-
     filterset_class = PerfumeFilter
 
 
