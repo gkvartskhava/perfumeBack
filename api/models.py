@@ -24,8 +24,8 @@ class Category(models.Model):
 class PerfumeDetails(models.Model):
     name = models.CharField(max_length=900)
     description = models.TextField()
-    image=models.CharField(max_length=10000)
-    image2 = models.ImageField(upload_to="images/")
+    image = models.CharField(max_length=10000)
+    image2 = models.ImageField(upload_to="images/",blank = True)
     price = models.IntegerField()
     quantity = models.IntegerField()
     category = models.ForeignKey(Category,on_delete=models.CASCADE,related_name="sex")
