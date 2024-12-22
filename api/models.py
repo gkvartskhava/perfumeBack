@@ -36,3 +36,4 @@ class PerfumeDetails(models.Model):
 
 
 
+
