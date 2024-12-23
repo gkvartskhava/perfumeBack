@@ -13,3 +13,6 @@ class CanDeleteReport(permissions.BasePermission):
 class CanAddReport(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
         return request.user.role == CustomUser.CUSTOMER
+    
+
+
