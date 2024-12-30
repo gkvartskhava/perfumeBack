@@ -12,7 +12,7 @@ class ItemViewSet(viewsets.ModelViewSet):
     serializer_class = PerfumeDetailSerializer
     filterset_class = PerfumeFilter
     filter_backends = [DjangoFilterBackend,filters.SearchFilter]
-    search_fields = ['name', 'category']
+    search_fields = ['name', 'category', 'price',]
 
    
 

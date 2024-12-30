@@ -9,6 +9,6 @@ router.register(r'item_list',ItemViewSet, basename='item')
 
 urlpatterns = [
     path('',include(router.urls))
-    # path('items/', ItemViewSet),
+    path('items/', ItemViewSet),
 ]
 
