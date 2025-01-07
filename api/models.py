@@ -29,6 +29,7 @@ class PerfumeDetails(models.Model):
     price = models.IntegerField()
     quantity = models.IntegerField()
     category = models.ForeignKey(Category,on_delete=models.CASCADE,related_name="sex")
+    in_stock = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
