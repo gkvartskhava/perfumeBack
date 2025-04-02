@@ -27,7 +27,7 @@ class PerfumeDetails(models.Model):
     image = models.CharField(max_length=10000)
     image2 = models.ImageField(upload_to="images/",blank = True)
     price = models.IntegerField()
-    quantity = models.IntegerField()
+    # quantity = models.IntegerField()
     category = models.ForeignKey(Category,on_delete=models.CASCADE,related_name="sex")
     in_stock = models.BooleanField(default=True)
 

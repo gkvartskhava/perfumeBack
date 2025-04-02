@@ -17,12 +17,12 @@ class ItemViewSet(viewsets.ModelViewSet):
     search_fields = ['name', 'category', 'price',]
 
    
-class SearchViewSet(ListAPIView):
-    queryset = PerfumeDetails.objects.all()
-    serializer_class = PerfumeDetailSerializer
-    filterset_class = PerfumeFilter
-    filter_backends = [OrderingFilter, SearchFilter]
-    search_fields = ['name', 'category', 'price',]
+# class SearchViewSet(ListAPIView):
+#     queryset = PerfumeDetails.objects.all()
+#     serializer_class = PerfumeDetailSerializer
+#     filterset_class = PerfumeFilter
+#     filter_backends = [OrderingFilter, SearchFilter]
+#     search_fields = ['name', 'category', 'price',]
 
 
 
