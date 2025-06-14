@@ -20,7 +20,7 @@ class ItemViewSet(viewsets.ModelViewSet):
     serializer_class = PerfumeDetailSerializer
     filterset_class = PerfumeFilter
     filter_backends = [DjangoFilterBackend, SearchFilter,OrderingFilter]
-    permission_classes = [permissions.IsAuthenticated,]
+    # permission_classes = [permissions.IsAuthenticated,]
     search_fields = ['name', 'category', 'price',]
 
 
