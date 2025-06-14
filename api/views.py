@@ -11,6 +11,7 @@ from rest_framework.generics import ListAPIView
 
 from rest_framework import mixins, generics, viewsets
 
+from .authentication import TokenAuthentication
 
 
 class ItemViewSet(viewsets.ModelViewSet):
@@ -20,7 +21,7 @@ class ItemViewSet(viewsets.ModelViewSet):
     serializer_class = PerfumeDetailSerializer
     filterset_class = PerfumeFilter
     filter_backends = [DjangoFilterBackend, SearchFilter,OrderingFilter]
-    # permission_classes = [permissions.IsAuthenticated,]
+    permission_classes = [permissions.IsAuthenticated]
     search_fields = ['name', 'category', 'price',]
 
 
