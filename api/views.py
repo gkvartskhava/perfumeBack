@@ -12,7 +12,7 @@ from rest_framework.generics import ListAPIView
 from rest_framework import mixins, generics, viewsets
 
 from .authentication import TokenAuthentication
-
+from .permissions import IsStaffEditorPermission
 
 class ItemViewSet(viewsets.ModelViewSet):
 
@@ -35,6 +35,7 @@ class ProductMixinView(mixins.UpdateModelMixin,
     queryset = PerfumeDetails.objects.all()
     serializer_class = PerfumeDetailSerializer
     lookup_field = "pk"
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly, permissions.IsAdminUser, IsStaffEditorPermission]
 
     def get(self,request, *args, **kwargs):
         # print(args,kwargs)
