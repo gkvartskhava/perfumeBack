@@ -21,7 +21,7 @@ class ItemViewSet(viewsets.ModelViewSet):
     serializer_class = PerfumeDetailSerializer
     filterset_class = PerfumeFilter
     filter_backends = [DjangoFilterBackend, SearchFilter,OrderingFilter]
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly, permissions.IsAdminUser]
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly, permissions.IsAdminUser]
     search_fields = ['name', 'category', 'price',]
 
 
@@ -35,7 +35,8 @@ class ProductMixinView(mixins.UpdateModelMixin,
     queryset = PerfumeDetails.objects.all()
     serializer_class = PerfumeDetailSerializer
     lookup_field = "pk"
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly, permissions.IsAdminUser, IsStaffEditorPermission]
+    # permission_classes = [ IsStaffEditorPermission]
+    # permission_classes = [permissions.IsAuthenticatedOrReadOnly, permissions.IsAdminUser, IsStaffEditorPermission]
 
     def get(self,request, *args, **kwargs):
         # print(args,kwargs)
