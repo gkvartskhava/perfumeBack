@@ -139,11 +139,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 REST_FRAMEWORK = {
-    # 'DEFAULT_AUTHENTICATION_CLASSES': [
-    #    'rest_framework.authentication.SessionAuthentication',
-    #    'rest_framework_simplejwt.authentication.JWTAuthentication',
-    #    'api.authentication.TokenAuthentication',
-    # ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+       'rest_framework.authentication.SessionAuthentication',
+       'rest_framework_simplejwt.authentication.JWTAuthentication',
+       'api.authentication.TokenAuthentication',
+    ],
     'DEFAULT_PERMISSION_CLASSES': [ 
        'rest_framework.permissions.IsAuthenticated',
 
@@ -154,6 +154,6 @@ REST_FRAMEWORK = {
 
 SIMPLE_JWT = {
     "AUTH_HEADER_TYPES" : ["Bearer"],
-    'ACCESS_TOKEN_LIFETIME': datetime.timedelta(minutes=1),
-    'REFRESH_TOKEN_LIFETIME': datetime.timedelta(minutes=1), 
+    'ACCESS_TOKEN_LIFETIME': datetime.timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': datetime.timedelta(minutes=60), 
 }
