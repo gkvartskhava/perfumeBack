@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_simplejwt',
+    'algoliasearch_django',
+    'algoliasearch',
 
 
 
@@ -156,4 +158,12 @@ SIMPLE_JWT = {
     "AUTH_HEADER_TYPES" : ["Bearer"],
     'ACCESS_TOKEN_LIFETIME': datetime.timedelta(minutes=60),
     'REFRESH_TOKEN_LIFETIME': datetime.timedelta(minutes=60), 
+}
+
+
+ALGOLIA = {
+  'APPLICATION_ID': os.getenv('APPLICATION_ID'), # Your Application ID
+  'API_KEY': os.getenv('API_KEY'),
+  'INDEX_PREFIX': 'gio',
+  
 }
