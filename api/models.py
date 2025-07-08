@@ -1,6 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
+from django.conf import settings
+from django.db import models
+from django.db.models import Q
+
+
+TAGS_MODEL_VALUES = ['electronics', 'cars', 'boats', 'movies', 'cameras']
+
 # from django.conf import settings
 
 
@@ -28,6 +35,7 @@ class Category(models.Model):
 
 
 class PerfumeDetails(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.SET_NULL, null=True, blank=True, default=None, related_name="perfume_details")
     name = models.CharField(max_length=900)
     description = models.TextField()
     image = models.CharField(max_length=10000)

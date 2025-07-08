@@ -162,8 +162,7 @@ SIMPLE_JWT = {
 
 
 ALGOLIA = {
-  'APPLICATION_ID': os.getenv('APPLICATION_ID'), # Your Application ID
-  'API_KEY': os.getenv('API_KEY'),
-  'INDEX_PREFIX': 'gio',
-  
+    'APPLICATION_ID': os.getenv('APPLICATION_ID'),
+    'API_KEY': os.getenv('API_KEY'),
+    'INDEX_PREFIX':'gio'
 }
