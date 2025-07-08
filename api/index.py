@@ -10,8 +10,8 @@ from algoliasearch_django.decorators import register
   
 @register(PerfumeDetails)
 class PerfumeDetailsIndex(AlgoliaIndex):
-    fields = ['name', 'description', 'price', 'in_stock', 'category']
+    fields = ['name', 'description', 'price', 'in_stock']
     settings = {
         'searchableAttributes': ['name', 'description', 'price', 'category'],
-        'attributesForFaceting': ['category.gender', 'in_stock'],
+        'attributesForFaceting': ['price', 'in_stock'],
     }

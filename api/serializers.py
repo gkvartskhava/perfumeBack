@@ -8,6 +8,7 @@ class PerfumeDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = PerfumeDetails 
         fields = [
+                  'user',
                     "name",
                    "category",
                     "price", 
