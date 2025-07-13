@@ -1,3 +1,4 @@
+
 # 🛍️ Django REST Framework Commerce API
 
 Welcome to the **Commerce API**, a powerful and secure backend service for an e-commerce application built with **Django REST Framework**, using **PostgreSQL**, JWT and Session authentication, and role-based access.
@@ -28,9 +29,18 @@ cd commerce-api
 
 ### 2. Set up a virtual environment
 
+#### On Linux/macOS:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+#### On Windows:
+
 ```bash
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+venv\Scripts\activate
 ```
 
 ### 3. Install dependencies
@@ -52,7 +62,7 @@ DB_HOST=localhost
 DB_PORT=5432
 ```
 
-### 5. Run migrations and start server
+### 5. Run migrations and start the server
 
 ```bash
 python manage.py makemigrations
@@ -114,11 +124,9 @@ CORS_ALLOWED_ORIGINS = [
 ├── requirements.txt
 ├── .env
 └── README.md
-
+```
 
 ---
-
-
 
 ## 👨‍💻 Contributing
 
@@ -127,6 +135,4 @@ Feel free to open an issue or submit a pull request. Contributions are welcome! 
 
 ---
 
-
-
-Made with ❤️ using Django + DRF  
+Made with ❤️ using Django + DRF
