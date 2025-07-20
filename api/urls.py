@@ -10,7 +10,7 @@ router=DefaultRouter()
 
 router.register(r'item_list',ItemViewSet, basename='item')
 router.register(r'listing',ProductMixinView, basename='list')
-# router.register(r'search', SearchViewSet,basename='search')
+router.register(r'search', SearchViewSet,basename='search')
 
 urlpatterns = [
     path('',include(router.urls))
